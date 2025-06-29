@@ -232,3 +232,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Built complete Tinder-like movie discovery app with TMDB integration. Ready to test backend API endpoints including TMDB data fetching, swipe recording, and progress tracking. Frontend has swipeable cards with beautiful UI."
+  - agent: "testing"
+    message: "Completed comprehensive testing of all backend API endpoints. Created backend_test.py to test all endpoints systematically. All tests passed successfully. The TMDB API integration is working correctly, returning movie and TV show data with proper image URLs. The swipe recording functionality correctly stores user likes/dislikes in MongoDB. Progress tracking and user statistics endpoints are also working as expected. All backend tasks have been marked as working."
