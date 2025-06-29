@@ -107,51 +107,63 @@ user_problem_statement: "Build me a tinder-like website for discovering new movi
 backend:
   - task: "TMDB API Integration"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Implemented TMDB service class with discover movies/TV, genres, and image URL generation"
+        - working: true
+          agent: "testing"
+          comment: "Successfully tested TMDB API integration. The /api/genres/movies endpoint returned 19 genres, /api/genres/tv returned 16 genres, and the /api/discover endpoint correctly returns movies and TV shows with poster_url and backdrop_url fields."
 
   - task: "Swipe Action Recording"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Created POST /api/swipe endpoint to record user likes/dislikes in MongoDB"
+        - working: true
+          agent: "testing"
+          comment: "Successfully tested swipe action recording. The /api/swipe endpoint correctly records both like and dislike actions in MongoDB, and the /api/liked endpoint retrieves liked content."
 
   - task: "User Progress Tracking"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Implemented progress tracking endpoints for watching status and completion"
+        - working: true
+          agent: "testing"
+          comment: "Successfully tested progress tracking. The /api/progress endpoint correctly records and retrieves user progress for movies and TV shows."
 
   - task: "User Statistics"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Added stats endpoint to show user swipe counts and progress metrics"
+        - working: true
+          agent: "testing"
+          comment: "Successfully tested user statistics. The /api/stats endpoint correctly aggregates and returns user activity metrics including swipe counts and progress status."
 
 frontend:
   - task: "Tinder-like Swipe Interface"
